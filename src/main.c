@@ -6,16 +6,14 @@
 /*   By: fjenisch <fjenisch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 19:46:54 by fjenisch          #+#    #+#             */
-/*   Updated: 2024/06/04 19:49:26 by fjenisch         ###   ########.fr       */
+/*   Updated: 2024/06/05 18:58:33 by fjenisch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../fdf.h"
+#include <stdio.h>
 
-
-
-
-int	main(void)
+int	main()
 {
+	printf("%d", 5);
 	return (0);
 }
