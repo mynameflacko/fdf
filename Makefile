@@ -6,7 +6,7 @@
 #    By: fjenisch <fjenisch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/05 17:40:23 by fjenisch          #+#    #+#              #
-#    Updated: 2024/06/05 19:24:07 by fjenisch         ###   ########.fr        #
+#    Updated: 2024/06/11 20:38:50 by fjenisch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,15 +28,16 @@ LIBFTDIR := ./lib/libft
 LIBFT := $(LIBFTDIR)/libft.a
 
 SOURCEDIR := ./src
-SOURCES := $(SOURCEDIR)/main.C
-SOURCESOBJ = $(SOURCES:.c=.o)
+SOURCES := $(SOURCEDIR)/fdf.c \
+$(SOURCEDIR)/ft_draw_line.c
+OBJECTS	:= ${SOURCES:.c=.o} $(GETNEXTLINEOBJ)
 
 # FdF have to come here
 
 all: libft libmlx $(NAME)
 
 libft:
-	make -C $(LIBFTDIR)
+	make bonus -C $(LIBFTDIR)
 
 libmlx:
 	cmake $(LIBMLX) -B $(LIBMLX)/build && make -C $(LIBMLX)/build -j4
@@ -44,12 +45,12 @@ libmlx:
 %.o: %.c
 	$(CC) $(CFLAGS) -o $@ -c $< $(HEADERS) && printf "Compiling: $(notdir $<)"
 
-$(NAME): libft $(GETNEXTLINEOBJ)
-	$(CC) $(GETNEXTLINEOBJ) $(SOURCESOBJ) $(LIBS) $(HEADERS) -o $@ $(LIBFT)
+$(NAME): libft $(OBJECTS)
+	@$(CC) $(OBJECTS) $(LIBS) $(HEADERS) -o $(NAME) $(LIBFT)
 
 clean:
 	make -C $(LIBFTDIR) clean
-	rm -rf $(GETNEXTLINEOBJ)¬
+	rm -rf $(OBJECTS)
 	rm -rf $(LIBMLX)/build
 	rm -f $(NAME)
 

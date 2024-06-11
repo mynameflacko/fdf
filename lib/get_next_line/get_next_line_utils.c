@@ -6,7 +6,7 @@
 /*   By: fjenisch <fjenisch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 12:54:17 by fjenisch          #+#    #+#             */
-/*   Updated: 2023/11/24 15:37:39 by fjenisch         ###   ########.fr       */
+/*   Updated: 2024/06/11 20:06:45 by fjenisch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char	*ft_strchr(const char *s, int c)
 	return (0);
 }
 
-char	*ft_strdup(char *s1)
+char	*ft_strduplicate(char *s1)
 {
 	char	*ptr;
 	char	*start;

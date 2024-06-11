@@ -10,6 +10,17 @@
 # include <stdlib.h>
 # include <fcntl.h>
 
+/**
+ * @brief
+ * @param
+ *
+ */
+typedef struct matrix
+{
+	int*		xaxis;
+	int*		yaxis;
+	int*		altitude;
+}	matrix;
 
 
 #endif

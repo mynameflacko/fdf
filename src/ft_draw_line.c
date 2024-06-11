@@ -6,19 +6,17 @@
 /*   By: fjenisch <fjenisch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:22:01 by fjenisch          #+#    #+#             */
-/*   Updated: 2024/06/07 17:51:43 by fjenisch         ###   ########.fr       */
+/*   Updated: 2024/06/11 20:42:09 by fjenisch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
+#include "../fdf.h"
 
 void	ft_draw_line(int start[2], int end[2])
 {
 	int	d;
 	int	dx;
 	int	dy;
-	int	x;
 
 	d = 0;
 	dx = 0;
@@ -44,11 +42,11 @@ void	ft_draw_line(int start[2], int end[2])
 
 
 
-int	main(void)
+/* int	main(void)
 {
 	int start[] = {0, 0};
 	int end[] = {5, 3};
 
 	ft_draw_line(start, end);
 	return (0);
-}
+} */

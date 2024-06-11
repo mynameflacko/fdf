@@ -6,7 +6,7 @@
 /*   By: fjenisch <fjenisch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 12:54:09 by fjenisch          #+#    #+#             */
-/*   Updated: 2023/11/24 11:12:11 by fjenisch         ###   ########.fr       */
+/*   Updated: 2024/06/11 20:07:02 by fjenisch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ char	*get_next_line(int fd);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_realloc(t_gnl *gnl);
 char	*ft_strchr(const char *s, int c);
-char	*ft_strdup(char *s1);
+char	*ft_strduplicate(char *s1);
 
 #endif
