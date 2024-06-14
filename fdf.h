@@ -15,12 +15,19 @@
  * @param
  *
  */
-typedef struct matrix
+typedef struct matrix_t
 {
 	int*		xaxis;
 	int*		yaxis;
 	int*		altitude;
-}	matrix;
+}	matrix_s;
 
+typedef struct valid_map_t
+{
+	int		str_len;
+	char	*valid;
+	int		fd;
+	
+}	valid_map;
 
 #endif
